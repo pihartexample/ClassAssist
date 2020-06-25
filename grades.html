@@ -1,0 +1,32 @@
+---
+layout: default
+script: grades.js
+replaceWithAuthMethod: true
+---
+
+
+<h1>Grades</h1>
+<input type="button" value="Sign In With Google" id="signIn" class="d-none"
+       onclick="firebase.auth().signInWithRedirect(new firebase.auth.GoogleAuthProvider())">
+
+<input type="button" value="Refresh" id="refresh" class="d-none" onclick="refreshGrades()">
+<input type="button" value="Sign Out" id="signOut" class="d-none" onclick="firebase.auth().signOut()">
+
+<div id="request-help" style="display:inline-block;float:right;">
+    <a class="btn" style="margin:0 !important;" id="help-button"
+       onclick="window.open(`{{ page.request_tutoring_google_form_url }}${firebase.auth().currentUser.uid}`);">
+        Request Tutoring
+    </a>
+</div>
+
+<br>
+<br>
+
+{% include loading.html %}
+<table id="grades" class="d-none">
+</table>
+<div class="box" id="expanded">
+    <div id="expandedheader"></div>
+    <a class="close" onclick="hide();"></a>
+    <div id="boxcontent"></div>
+</div>

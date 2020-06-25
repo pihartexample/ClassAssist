@@ -1,0 +1,30 @@
+---
+layout: default
+script: messages.js
+---
+
+<body class="theme-base-08" id="body">
+<div class="box" id="expanded">
+    <div id="expandedheader"></div>
+    <a class="close" onclick="hide();"></a>
+    <div id="boxcontent"></div>
+</div>
+<h1 id="title"> Announcements</h1>
+<div id="messages">
+
+    {% include loading.html %}
+
+    <div class="card">
+        <h7>Loading</h7>
+        <h1>If you can see this, your JavaScript is enabled, but we can't load your content. Check your Internet
+            connection and see if you can access <a href="sheets.google.com">Google Sheets</a>.</h1>
+        <date></date>
+    </div>
+
+</div>
+<a id="load" class="action" onclick="filterMessages(false);">Load more<br></a>
+<a id="refresh" class="action" onclick="filterMessages(true);">Refresh</a>
+<br>
+
+<a href="#body" class="action">Back to top</a>
+</body>

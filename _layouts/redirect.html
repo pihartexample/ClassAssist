@@ -1,0 +1,22 @@
+---
+layout: compress
+---
+
+<!DOCTYPE html>
+
+<html lang="{{ site.lang | default: "en-US" }}">
+
+{% case page.redirect %}
+    {% when "support_materials" %}
+        {% assign url = site.support_materials_url %}
+    {% else %}
+        {% if page.local %}
+            {% assign url = site.url | append: page.redirect %}
+        {% else %}
+            {% assign url = page.redirect %}
+        {% endif %}
+{% endcase %}
+
+<meta http-equiv="Refresh" content="0; url={{ url }}">
+
+</html>
