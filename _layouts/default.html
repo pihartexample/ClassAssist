@@ -79,7 +79,7 @@ layout: compress
     </header>
     <main id="content" class="main-content" role="main">
       {{ content }}
-      <script src="{{ hostingURL }}/js/script.min.js"></script>
+      <script src="{{ site.baseurl }}/js/script.min.js"></script>
       {% if page.script %}
         {% assign suffix = "" %}
 
@@ -89,7 +89,7 @@ layout: compress
 
         {% assign suffix = suffix | append: ".min.js" %}
 
-        <script src="{{ hostingURL }}/js/{{ page.script | replace: ".min", "" | replace: ".js", suffix }}"></script>
+        <script src="{{ site.baseurl }}/js/{{ page.script | replace: ".min", "" | replace: ".js", suffix }}"></script>
       {% endif %}
 
     </main>
