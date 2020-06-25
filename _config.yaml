@@ -1,0 +1,60 @@
+theme: jekyll-theme-cayman
+theme-color: \#157878
+title: Chemistry # Chooses page title, then site title, then github repo name
+buttons:
+  - Messages
+  - Grades
+  - Calendar
+  - Support Materials
+change_theme_button: setTheme(true)
+view_on_github_button: false
+public_grades_spreadsheet_id: 1P7mMSLCMgqmax0nS3NwvA9oll24dY-2QDy2AYssToRI
+public_messages_spreadsheet_id: 1QcPGPgBpj_XTe5TJL1WOWD8fnqN6RIT3_aWFbx8MyVQ
+
+support_materials_url: https://drive.google.com/drive/u/1/folders/1XqKsVwOSxrX3UTu9XtDI8ZkPq6aHFixs # must be specified in the code
+request_tutoring_google_form_url: https://tiny.cc/chemtutoring/viewform?entry.842061695= # https:// /viewform?entry. =
+calendar_url: https://calendar.google.com/calendar/embed?src=classroom107168838537464724542%40group.calendar.google.com&ctz=America%2FLos_Angeles
+# google_analytics: <id>
+filters:
+  - ["All", undefined]
+  - ["Deadlines", "Deadline"]
+  - ["Messages", "Message"]
+  - ["Lecture Notes", null]
+  - ["Projects", "Project"]
+  - ["Labs","Lab"]
+themes:
+  - "light"
+#  - "color"
+  - "dark"
+  - "dark2"
+  - "lite"
+  - "pink"
+  - "pink2"
+theme_colors:
+  - "#157878"
+#  - "#157878"
+  - "#702a20"
+  - "#702a20"
+  - "#127df0"
+  - "#ce9d75"
+  - "#ce9d75"
+icons:
+  - ["Deadline", "calendar.svg"]
+  - ["Message", "mail.svg"]
+  - ["Lecture Notes", "notes.svg"]
+  - ["Project","document.svg"]
+  - ["Lab","lab.svg"]
+
+auth-method: firebase
+# not currently in use but this allows fb config to be generated into the same file.
+firebase_config: firebase.initializeApp({apiKey:"AIzaSyCDOyNU0VUIK_G6XVCLkj9ekpIHcOhbnHA",authDomain:"chemistry-shieh.firebaseapp.com",databaseURL:"https://chemistry-shieh.firebaseio.com",projectId:"chemistry-shieh",storageBucket:"chemistry-shieh.appspot.com",messagingSenderId:"500393158432",appId:"1:500393158432:web:13e8a300aaa8501b15d945",measurementId:"G-R6KQ7S9D7Y"}),firebase.analytics();
+
+compress_html:
+  clippings: []
+  comments: []
+  endings: []
+  ignore:
+  envs: []
+  blanklines: false
+  profile: false
+  startings: []
