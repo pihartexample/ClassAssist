@@ -84,7 +84,7 @@ layout: compress
         {% assign suffix = "" %}
 
         {% if page.replaceWithAuthMethod %}
-          {% assign suffix = "-" | append: site.authMethod %}
+          {% assign suffix = "-" | append: site.auth-method %}
         {% endif %}
 
         {% assign suffix = suffix | append: ".min.js" %}
